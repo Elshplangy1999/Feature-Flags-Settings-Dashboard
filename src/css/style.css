@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Tailwind v3 directives - replace the v4 import */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================= Base ================= */
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="ltr"] {
+  text-align: left;
+}
+
+.language-switcher {
+  transition: all 0.3s ease;
+}
+
+/* ================= Components ================= */
+
+@layer components {
+  .select-dark-bg {
+    @apply dark:bg-gray-800;
+  }
+}
+
+/* ================= Base Layer ================= */
+
+@layer base {
+  body {
+    @apply relative z-10 bg-gray-100 text-gray-800 text-base font-normal
+           dark:bg-gray-950 dark:text-gray-300;
+  }
+}
+
+/* ================= Utilities ================= */
+
+@layer utilities {
+  /* Remove Scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .chat-height {
+    @apply h-[calc(100vh_-_8rem)] lg:h-[calc(100vh_-_5.5rem)];
+  }
+
+  .inbox-height {
+    @apply h-[calc(100vh_-_8rem)] lg:h-[calc(100vh_-_5.5rem)];
+  }
+}
+
+/* ================= Fixes ================= */
+
+/* Replace ALL bg-gray-2 usage with valid scale */
+.flatpickr-day.inRange,
+.flatpickr-day.prevMonthDay.inRange,
+.flatpickr-day.nextMonthDay.inRange,
+.flatpickr-day.today.inRange,
+.flatpickr-day.prevMonthDay.today.inRange,
+.flatpickr-day.nextMonthDay.today.inRange,
+.flatpickr-day:hover,
+.flatpickr-day.prevMonthDay:hover,
+.flatpickr-day.nextMonthDay:hover,
+.flatpickr-day:focus,
+.flatpickr-day.prevMonthDay:focus,
+.flatpickr-day.nextMonthDay:focus {
+  @apply border-gray-200 bg-gray-200 dark:border-gray-700 dark:bg-gray-700;
+}
+
+.data-table-two .datatable-search input {
+  @apply h-11 w-full rounded border border-gray-300 bg-gray-100 px-5 outline-none
+         focus:border-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:focus:border-blue-500;
+}
+
+/* Example primary color */
+.bg-primary {
+  @apply bg-green-600;
+}
+
+.border-primary {
+  @apply border-green-600;
+}

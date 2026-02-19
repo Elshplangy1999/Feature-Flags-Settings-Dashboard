@@ -1,0 +1,70 @@
+.errorContainer {
+  height: 97.5vh;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.errorCard {
+  background: white;
+  padding: 48px 32px;
+  border-radius: 32px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.errorNumber {
+  font-size: 120px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin: 8px 0;
+}
+
+.errorCard h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 16px 0 8px;
+}
+
+.errorCard p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 16px 0 32px;
+}
+
+.homeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.homeBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px #6366f180;
+}
+
+.homeBtn:active {
+  transform: translateY(0);
+}
